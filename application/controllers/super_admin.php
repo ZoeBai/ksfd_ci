@@ -54,7 +54,9 @@ class Super_admin extends CI_Controller {
 	}
 
 	public function view_product(){
-		;
-		$this->load->view('product');
+		$this->load->database();
+		$this->load->model('Productmodel');
+		$data["query"]=$this->Productmodel->showall();
+		$this->load->view('product',$data);
 	}
 }
