@@ -151,7 +151,7 @@
    				<img src="<?php echo base_url('assets/img/face80x80.jpg');?>" alt="" class="img-circle">
    				<br>
    				<br>
-					<form class="cmxform" id="signupForm" method="get" action="<?php echo base_url('index.php/super_admin/mainboard');?>">
+					<form class="cmxform" id="signupForm" method="get" action="<?php echo base_url('index.php/super_admin/login');?>">
 						<fieldset>
 							<p>
 								<input id="username" name="username" type="text" placeholder="Username">

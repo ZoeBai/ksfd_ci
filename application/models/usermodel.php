@@ -21,8 +21,8 @@ class Usermodel extends CI_Model {
 		return false;
 	}
 
-	function getname(){
-		$query=$this->db->query("SELECT name from user where id=?",array($this->id));
+	function getname($id){
+		$query=$this->db->query("SELECT name from user where id=?",array($id));
 		return $query->row()->name;
 	}
 

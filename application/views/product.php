@@ -28,7 +28,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo base_url('assets/ico/favicon.ico');?>">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url('assets/ico/apple-touch-icon-144-precomposed.png');?>">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url('assets/ico/apple-touch-icon-114-precomposed.png');?>">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url('assets/ico/apple-touch-icon-72-precomposed.png');?>">
@@ -41,7 +41,9 @@
     <script type="text/javascript" src="<?php echo base_url('assets/js/datatables/jquery.dataTables.js');?>"></script>
   	<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#dt1').dataTable();
+				$('#dt1').dataTable({ 
+            "bAutoWidth": true 
+        });
 			} );
 	</script>
 
@@ -64,11 +66,11 @@
         </div> 
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html"><i class="icon-home icon-white"></i> Home</a></li>
-              <li><a href="<?php echo base_url('index.php/super_admin')?>"><i class="icon-lock icon-white"></i> Login</a></li>
+              <li><a href="<?php echo base_url('index.php/super_admin')?>"><i class="icon-home icon-white"></i> Home</a></li>
+              <li><a href="<?php echo base_url('index.php/super_admin/logout')?>"><i class="icon-lock icon-white"></i> Logout</a></li>
               <li><a href="<?php echo base_url('index.php/super_admin/signup')?>"><i class="icon-user icon-white"></i> User</a></li>
-              <li><a href="<?php echo base_url('index.php/super_admin/view_product')?>"><i class="icon-user icon-white"></i> Product</a></li>
-
+              <li class="active"><a href="<?php echo base_url('index.php/super_admin/view_product')?>"><i class="icon-user icon-white"></i> Product</a></li>
+              <li><a href="<?php echo base_url('index.php/super_admin/manage_page')?>"><i class="icon-user icon-white"></i> Manager</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -86,15 +88,15 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>cn_name</th>
-            <th>kr_name</th>
-            <th>fullprice</th>
+            <th>中文名</th>
+            <th>韩语名</th>
+            <th>零售价</th>
             <th>A</th>
             <th>B</th>
             <th>C</th>
             <th>D</th>
-            <th>point_jf</th>
-            <th>stock</th>
+            <th>积分</th>
+            <th>库存</th>
           </tr>
         </thead>
         <tbody>
@@ -109,17 +111,18 @@
               echo "<td>".$row->id."</td>";
               echo "<td>".$row->cn_name."</td>";
               echo "<td>".$row->kr_name."</td>";
-              echo "<td>".$row->fullprice."</td>";
-              echo "<td>".$row->A."</td>";
-              echo "<td>".$row->B."</td>";
-              echo "<td>".$row->C."</td>";
-              echo "<td>".$row->D."</td>";
-              echo "<td>".$row->point_jf."</td>";
-              echo "<td>".$row->stock."</td>";
+              echo "<td class='center'>".$row->fullprice."</td>";
+              echo "<td class='center'>".$row->A."</td>";
+              echo "<td class='center'>".$row->B."</td>";
+              echo "<td class='center'>".$row->C."</td>";
+              echo "<td class='center'>".$row->D."</td>";
+              echo "<td class='center'>".$row->point_jf."</td>";
+              echo "<td class='center'>".$row->stock."</td>";
               echo "</tr>";
             }
           }
           ?>
+          <!--
           <tr class="odd gradeX">
             <td>Trident</td>
             <td>Internet Explorer 4.0</td>
@@ -132,6 +135,7 @@
             <td class="center"> 4</td>
             <td class="center">X</td>
           </tr>
+        -->
 
           
           

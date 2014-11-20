@@ -53,9 +53,9 @@
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="<?php echo base_url('index.php/super_admin');?>"><i class="icon-home icon-white"></i> Home</a></li>
-              <li><a href="<?php echo base_url('index.php/super_admin/login');?>"><i class="icon-lock icon-white"></i> Login</a></li>
+              <li><a href="<?php echo base_url('index.php/super_admin');?>"><i class="icon-lock icon-white"></i> Login</a></li>
               <li class="active"><a href="<?php echo base_url('index.php/super_admin/signup');?>"><i class="icon-user icon-white"></i> User</a></li>
-
+             
             </ul>
           </div><!--/.nav-collapse -->
         </div>
