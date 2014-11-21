@@ -131,6 +131,12 @@ class Super_admin extends CI_Controller {
 		$this->load->library('session');
 		$this->load->model('Usermodel');
 
+		$pid=$this->input->get('id',True);
+
+		$this->Productmodel->del($pid);
+		echo "<script language='javascript' type='text/javascript'>";  
+		echo "alert('删除完成！');";  
+		echo "</script>";
 
 		$id = $this->session->userdata('id');
 		$name=$this->Usermodel->getname($id);

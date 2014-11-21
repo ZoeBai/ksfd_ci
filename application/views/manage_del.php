@@ -148,7 +148,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            增加商品信息
+                            删除商品信息
                             <small>K.S.F.D 会员专用</small>
                         </h1>
                         <ol class="breadcrumb">
@@ -157,7 +157,7 @@
                                 <a href="<?php echo base_url('index.php/super_admin')?>">控制面板</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> 添加信息
+                                <i class="fa fa-file"></i> 删除信息
                             </li>
                         </ol>
                     </div>
@@ -167,12 +167,12 @@
 
                         <div class='col-md-12'>
                             <div class="form-group">
-                                <label>商品ID</label>
+                                <label>输入商品ID</label>
                                 <input class="form-control" name="id">
                             </div>
                             <br/>
                             <center>
-                                <div id="submit_btn" class="btn btn-lg btn-success">Submit Button</div>
+                                <button  type="submit" id="submit_btn" class="btn btn-lg btn-success">Submit Button</button>
                                 <button type="reset" class="btn btn-lg btn-warning">Reset Button</button>
                             </center>
                         </div>

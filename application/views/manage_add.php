@@ -182,12 +182,16 @@
                                 <input class="form-control" name="fullprice">
                             </div>
                             <div class="form-group">
+                                <label>韩关价</label>
+                                <input class="form-control" name="koreanprice">
+                            </div>
+                            <div class="form-group">
                                 <label>积分</label>
-                                <input class="form-control" name="fullprice">
+                                <input class="form-control" name="point_jf">
                             </div>
                             <div class="form-group">
                                 <label>库存</label>
-                                <input class="form-control" name="fullprice">
+                                <input class="form-control" name="stock">
                             </div>
                             <div class="form-group">
                                 <label>Logo URL</label>
@@ -197,24 +201,32 @@
 
                         <div class='col-lg-6'>
                             <div class="form-group">
-                                <label>A</label>
+                                <label>A　（请以小数形式输入）</label>
                                 <input class="form-control" name="A">
                             </div>
                             <div class="form-group">
-                                <label>B</label>
+                                <label>B　（请以小数形式输入）</label>
                                 <input class="form-control" name="B">
                             </div>
                             <div class="form-group">
-                                <label>C</label>
+                                <label>C　（请以小数形式输入）</label>
                                 <input class="form-control" name="C">
                             </div>
                             <div class="form-group">
-                                <label>D</label>
+                                <label>D　（请以小数形式输入）</label>
                                 <input class="form-control" name="D">
                             </div>
                             <div class="form-group">
+                                <label>公司编号</label>
+                                <input class="form-control" name="comp_id">
+                            </div>
+                            <div class="form-group">
+                                <label>条形码</label>
+                                <input class="form-control" name="barcode">
+                            </div>
+                            <div class="form-group">
                                 <label>简单介绍</label>
-                                <textarea class="form-control" rows="8" name="intro"></textarea>
+                                <textarea class="form-control" rows="5" name="intro"></textarea>
                             </div>
                         </div>
 
@@ -240,8 +252,8 @@
                             </div><!-- /.box -->
                             <br/>
                             <center>
-                                <div id="submit_btn" class="btn btn-lg btn-success">Submit Button</div>
-                                <button type="reset" class="btn btn-lg btn-warning">Reset Button</button>
+                                <div id="submit_btn" class="btn btn-lg btn-success">提交 条目</div>
+                                <button type="reset" class="btn btn-lg btn-warning">重置 所有</button>
                             </center>
                         </div>
                     </form>

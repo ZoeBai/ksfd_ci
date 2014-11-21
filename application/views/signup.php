@@ -122,13 +122,13 @@
     		        		<label for="id">ID</label>
     		        		<input name="id" class="input-huge" type="text">
         		        	<!-- name -->
-    		        		<label for="name">Name</label>
+    		        		<label for="name">Real Name</label>
     		        		<input name="name" class="input-huge" type="text">
         		        	<!-- address -->
         		        	<label>Address</label>
         		        	<input name="address" class="input-huge" type="text">
         		        	<!-- note -->
-        		        	<label>Note</label>
+        		        	<label>Phone Number</label>
         		        	<input name="note" class="input-huge" type="text">
         		        	<!-- password -->
         		        	<label>Password</label>
@@ -154,8 +154,8 @@
       	<div class="container">
       		<div class="row">
       			<div class="col-sm-12 col-lg-12">
-      			<p><img src="assets/img/logo.png" alt=""></p>
-      			<p>Blocks Dashboard Theme - Crafted With Love - Copyright 2013</p>
+      			<p><img src="<?php echo base_url('assets/img/logo.png');?>" alt=""></p>
+      			<p>凯诗菲蒂财务自动化办公系统 - 龙潜智 编写 - Copyright 2014</p>
       			</div>
 
       		</div><!-- /row -->
