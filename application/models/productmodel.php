@@ -52,6 +52,60 @@ class Productmodel extends CI_Model {
 	function del($id){
 		$this->db->delete('product', array('id' => $id));
 	}
+
+	function mod($id){
+		
+		$cn_name=$this->input->get('cn_name',True);
+		$kr_name=$this->input->get('kr_name',True);
+		$fullprice=$this->input->get('fullprice',True);
+		$koreanprice=$this->input->get('koreanprice',True);
+
+		$A=$this->input->get('A',True);
+		$B=$this->input->get('B',True);
+		$C=$this->input->get('C',True);
+		$D=$this->input->get('D',True);
+
+		$logo=$this->input->get('logo',True);
+		$detail=$this->input->get('detail',True);
+		$intro=$this->input->get('intro',True);
+		$point_jf=$this->input->get('point_jf',True);
+		$stock=$this->input->get('stock',True);
+
+		$comp_id=$this->input->get('comp_id',True);
+		$barcode=$this->input->get('barcode',True);
+
+		$data = array(
+               'cn_name' =>  $cn_name,
+               'kr_name' => $kr_name,
+               'fullprice' => $fullprice,
+               'koreanprice' => $koreanprice,
+               'A' => $A ,
+               'B' => $B ,
+               'C' => $C ,
+               'D' => $D ,
+               'logo' => $logo ,
+               'detail' => $detail ,
+               'intro' => $intro ,
+               'point_jf' => $point_jf ,
+               'stock' => $stock ,
+               'barcode' => $barcode,
+               'comp_id' => $comp_id
+            );
+
+		$this->db->where('id', $id);
+		$this->db->update('product', $data);;
+	}
+
+	function show_one($id){
+		$query = $this->db->query("select * from product where id=?", array('id' => $id));
+
+		if ($query->num_rows() > 0){
+			$row = $query->row(); 
+			return $row;
+		}else{
+			die("<h1>Error!</h1>");
+		} 
+	}
 }
 
 ?>

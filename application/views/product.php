@@ -14,7 +14,7 @@
 
 
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.11.0.js');?>"></script>
 
     <style type="text/css">
       body {

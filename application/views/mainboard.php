@@ -4,7 +4,7 @@
     <title>K.S.F.D - Bootstrap Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Carlos Alvarez - Alvarez.is">
+    <meta name="author" content="Long Qianzhi">
 
     <!-- Le styles -->
     <link href="<?php echo base_url('assets/css/bootstrap.css');?>" rel="stylesheet">
@@ -12,7 +12,7 @@
     <link href="<?php echo base_url('assets/css/font-style.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/flexslider.css');?>" rel="stylesheet">
     
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.11.0.js');?>"></script>
 
     <style type="text/css">
       body {
@@ -33,8 +33,8 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo base_url('assets/ico/apple-touch-icon-57-precomposed.png');?>">
 
   	<!-- Google Fonts call. Font Used Open Sans & Raleway -->
-	<link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
-  	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets/css/raleway.css');?>" rel="stylesheet" type="text/css">
+  	<link href="<?php echo base_url('assets/css/open_sans.css');?>" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 $(document).ready(function () {

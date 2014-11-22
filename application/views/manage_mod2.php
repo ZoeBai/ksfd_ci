@@ -150,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            增加商品信息
+                            修改商品信息
                             <small>K.S.F.D 会员专用</small>
                         </h1>
                         <ol class="breadcrumb">
@@ -159,77 +159,78 @@
                                 <a href="<?php echo base_url('index.php/super_admin')?>">控制面板</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> 添加信息
+                                <i class="fa fa-file"></i> 修改记录
                             </li>
                         </ol>
                     </div>
 
                     <!--------------------- -->
-                    <form id="form1" role="form" action="<?php echo base_url('index.php/super_admin/add_product')?>">
-
-                        <div class='col-lg-6'>
+                        
+                    <form id="form1" role="form" action="<?php echo base_url('index.php/super_admin/mod_product')?>">
+                        <input type="hidden" name="id" value="<?php echo $row->id;?>" />
+                        <div class='col-lg-6'> 
                             <div class="form-group">
                                 <label>商品ID</label>
-                                <input class="form-control" name="id">
+                                <input class="form-control" value="<?php echo $row->id;?>" disabled="disabled" >
                             </div>
                             <div class="form-group">
                                 <label>中文名</label>
-                                <input class="form-control" name="cn_name">
+                                <input class="form-control" name="cn_name" value="<?php echo $row->cn_name;?>" >
                             </div>
                             <div class="form-group">
                                 <label>韩语名</label>
-                                <input class="form-control" name="kr_name">
+                                <input class="form-control" name="kr_name" value="<?php echo $row->kr_name;?>">
                             </div>
                             <div class="form-group">
                                 <label>零售价</label>
-                                <input class="form-control" name="fullprice">
+                                <input class="form-control" name="fullprice" value="<?php echo $row->fullprice;?>">
                             </div>
                             <div class="form-group">
                                 <label>韩关价</label>
-                                <input class="form-control" name="koreanprice">
+                                <input class="form-control" name="koreanprice" value="<?php echo $row->koreanprice;?>">
                             </div>
                             <div class="form-group">
                                 <label>积分</label>
-                                <input class="form-control" name="point_jf">
+                                <input class="form-control" name="point_jf" value="<?php echo $row->point_jf;?>">
                             </div>
                             <div class="form-group">
                                 <label>库存</label>
-                                <input class="form-control" name="stock">
+                                <input class="form-control" name="stock" value="<?php echo $row->stock;?>">
                             </div>
                             <div class="form-group">
                                 <label>Logo URL</label>
-                                <input class="form-control" name="logo">
+                                <input class="form-control" name="logo" value="<?php echo $row->logo;?>">
                             </div>
                         </div>
 
                         <div class='col-lg-6'>
                             <div class="form-group">
                                 <label>A　（请以小数形式输入）</label>
-                                <input class="form-control" name="A">
+                                <input class="form-control" name="A" value="<?php echo $row->A;?>">
                             </div>
                             <div class="form-group">
                                 <label>B　（请以小数形式输入）</label>
-                                <input class="form-control" name="B">
+                                <input class="form-control" name="B" value="<?php echo $row->B;?>">
                             </div>
                             <div class="form-group">
                                 <label>C　（请以小数形式输入）</label>
-                                <input class="form-control" name="C">
+                                <input class="form-control" name="C" value="<?php echo $row->C;?>" value="<?php echo $row->id;?>">
                             </div>
                             <div class="form-group">
                                 <label>D　（请以小数形式输入）</label>
-                                <input class="form-control" name="D">
+                                <input class="form-control" name="D" value="<?php echo $row->D;?>">
                             </div>
                             <div class="form-group">
                                 <label>公司编号</label>
-                                <input class="form-control" name="comp_id">
+                                <input class="form-control" name="comp_id" value="<?php echo $row->comp_id;?>">
                             </div>
                             <div class="form-group">
                                 <label>条形码</label>
-                                <input class="form-control" name="barcode">
+                                <input class="form-control" name="barcode" value="<?php echo $row->barcode;?>">
                             </div>
                             <div class="form-group">
                                 <label>简单介绍</label>
-                                <textarea class="form-control" rows="5" name="intro"></textarea>
+                                <textarea class="form-control" rows="5" name="intro" value="<?php echo $row->intro;?>"></textarea>
                             </div>
                         </div>
 
@@ -247,7 +248,7 @@
                                 <div class='box-body pad'>
                                     <form>
                                         <textarea id="editor1" name="editor1" rows="10" cols="80">
-                                            请在此输入产品的详细介绍.
+                                             <?php echo $row->detail;?>
                                         </textarea>
                                     </form>
                                 </div>

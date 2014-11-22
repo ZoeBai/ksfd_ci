@@ -9,7 +9,6 @@ class Super_admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->library('session');
 		$id = $this->session->userdata('id');
 		$password = $this->session->userdata('password');
 		if($this->ISEXIST($id)){
@@ -20,9 +19,6 @@ class Super_admin extends CI_Controller {
 
 	public function mainboard()
 	{
-		$this->load->database();
-		$this->load->library('session');
-
 		$id=$this->session->userdata('id');
 		$password=$this->session->userdata('password');
 
@@ -39,7 +35,6 @@ class Super_admin extends CI_Controller {
 	}
 
 	public function login(){
-		$this->load->library('session');
 		$id=$this->input->get('username',True);
 		$password=$this->input->get('password',True);
 		$this->session->set_userdata('id', $id);
@@ -59,7 +54,6 @@ class Super_admin extends CI_Controller {
 	}
 
 	public function new_user_submit(){
-		$this->load->database();
 		$id=$this->input->get('id',True);
 		$name=$this->input->get('name',True);
 		$address=$this->input->get('address',True);
@@ -82,15 +76,12 @@ class Super_admin extends CI_Controller {
 	}
 
 	public function view_product(){
-		$this->load->database();
 		$this->load->model('Productmodel');
 		$data["query"]=$this->Productmodel->showall();
 		$this->load->view('product',$data);
 	}
 
 	public function manage_page(){
-		$this->load->database();
-		$this->load->library('session');
 		$this->load->model('Usermodel');
 		$id = $this->session->userdata('id');
 		$name=$this->Usermodel->getname($id);
@@ -99,8 +90,6 @@ class Super_admin extends CI_Controller {
 	}
 
 	public function manage_page_del(){
-		$this->load->database();
-		$this->load->library('session');
 		$this->load->model('Usermodel');
 		$id = $this->session->userdata('id');
 		$name=$this->Usermodel->getname($id);
@@ -108,10 +97,48 @@ class Super_admin extends CI_Controller {
 		$this->load->view('manage_del',$data);
 	}
 
-	public function add_product(){
-		$this->load->database();
+	public function manage_page_mod(){
+		$this->load->model('Usermodel');
+		$id = $this->session->userdata('id');
+		$name=$this->Usermodel->getname($id);
+		$data = array('id' => $id, 'name' => $name);
+		$this->load->view('manage_mod1',$data);
+	}
+
+	public function mod_show_record(){
+		$this->load->model('Usermodel');
 		$this->load->model('Productmodel');
-		$this->load->library('session');
+		$id = $this->session->userdata('id');
+		$name=$this->Usermodel->getname($id);
+		$data = array('id' => $id, 'name' => $name);
+
+		$pid=$this->input->get('id',True);
+
+		$data["row"]=$this->Productmodel->show_one($pid);
+
+		$this->load->view('manage_mod2',$data);
+	}
+
+
+	public function mod_product()
+	{
+		$this->load->model('Productmodel');
+		$this->load->model('Usermodel');
+
+		$id=$this->input->get('id',True);
+
+		$this->Productmodel->mod($id);
+		echo "<script language='javascript' type='text/javascript'>";  
+		echo "alert('".$id."修改完成！');";  
+		echo "</script>";
+		
+		$this->manage_page_mod();
+	}
+
+
+	public function add_product()
+	{
+		$this->load->model('Productmodel');
 		$this->load->model('Usermodel');
 
 		$this->Productmodel->add();
@@ -125,10 +152,10 @@ class Super_admin extends CI_Controller {
 		$this->load->view('manage_add',$data);
 	}
 
-	public function del_product(){
-		$this->load->database();
+
+	public function del_product()
+	{
 		$this->load->model('Productmodel');
-		$this->load->library('session');
 		$this->load->model('Usermodel');
 
 		$pid=$this->input->get('id',True);

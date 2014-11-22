@@ -150,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            增加商品信息
+                            修改商品信息
                             <small>K.S.F.D 会员专用</small>
                         </h1>
                         <ol class="breadcrumb">
@@ -159,108 +159,25 @@
                                 <a href="<?php echo base_url('index.php/super_admin')?>">控制面板</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> 添加信息
+                                <i class="fa fa-file"></i> 修改记录
                             </li>
                         </ol>
                     </div>
 
                     <!--------------------- -->
-                    <form id="form1" role="form" action="<?php echo base_url('index.php/super_admin/add_product')?>">
 
-                        <div class='col-lg-6'>
+                    <form id="form1" role="form" action="<?php echo base_url('index.php/super_admin/mod_show_record')?>">
+                        <div class='col-md-12'>
                             <div class="form-group">
                                 <label>商品ID</label>
                                 <input class="form-control" name="id">
                             </div>
-                            <div class="form-group">
-                                <label>中文名</label>
-                                <input class="form-control" name="cn_name">
-                            </div>
-                            <div class="form-group">
-                                <label>韩语名</label>
-                                <input class="form-control" name="kr_name">
-                            </div>
-                            <div class="form-group">
-                                <label>零售价</label>
-                                <input class="form-control" name="fullprice">
-                            </div>
-                            <div class="form-group">
-                                <label>韩关价</label>
-                                <input class="form-control" name="koreanprice">
-                            </div>
-                            <div class="form-group">
-                                <label>积分</label>
-                                <input class="form-control" name="point_jf">
-                            </div>
-                            <div class="form-group">
-                                <label>库存</label>
-                                <input class="form-control" name="stock">
-                            </div>
-                            <div class="form-group">
-                                <label>Logo URL</label>
-                                <input class="form-control" name="logo">
-                            </div>
                         </div>
-
-                        <div class='col-lg-6'>
-                            <div class="form-group">
-                                <label>A　（请以小数形式输入）</label>
-                                <input class="form-control" name="A">
-                            </div>
-                            <div class="form-group">
-                                <label>B　（请以小数形式输入）</label>
-                                <input class="form-control" name="B">
-                            </div>
-                            <div class="form-group">
-                                <label>C　（请以小数形式输入）</label>
-                                <input class="form-control" name="C">
-                            </div>
-                            <div class="form-group">
-                                <label>D　（请以小数形式输入）</label>
-                                <input class="form-control" name="D">
-                            </div>
-                            <div class="form-group">
-                                <label>公司编号</label>
-                                <input class="form-control" name="comp_id">
-                            </div>
-                            <div class="form-group">
-                                <label>条形码</label>
-                                <input class="form-control" name="barcode">
-                            </div>
-                            <div class="form-group">
-                                <label>简单介绍</label>
-                                <textarea class="form-control" rows="5" name="intro"></textarea>
-                            </div>
-                        </div>
-
-
-                        <div class='col-md-12'>
-                            <div class='box box-info'>
-                                <div class='box-header'>
-                                    <h3 class='box-title'>详细介绍 <small>为了保持服务器的处理速度，若加图片，请使用第三方图床</small></h3>
-                                    <!-- tools box -->
-                                    <div class="pull-right box-tools">
-                                        <div class="btn btn-info btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></div>
-                                        <div class="btn btn-info btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></div>
-                                    </div><!-- /. tools -->
-                                </div><!-- /.box-header -->
-                                <div class='box-body pad'>
-                                    <form>
-                                        <textarea id="editor1" name="editor1" rows="10" cols="80">
-                                            请在此输入产品的详细介绍.
-                                        </textarea>
-                                    </form>
-                                </div>
-                                <input type="hidden" id="detail" name="detail">
-                            </div><!-- /.box -->
-                            <br/>
-                            <center>
-                                <div id="submit_btn" class="btn btn-lg btn-success">提交 条目</div>
-                                <button type="reset" class="btn btn-lg btn-warning">重置 所有</button>
-                            </center>
-                        </div>
-                    </form>
-
+                        <center>
+                            <button type="submit" id="submit_btn" class="btn btn-lg btn-success">查询ID</button>
+                            <button type="reset" class="btn btn-lg btn-warning">重置 所有</button>
+                        </center>
+                    </form>                      
 
                     <!-------------------------- -->
                 </div>

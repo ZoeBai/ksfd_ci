@@ -133,6 +133,9 @@
                             <li>
                                 <a href="<?php echo base_url('index.php/super_admin/manage_page_del')?>">删除项目</a>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url('index.php/super_admin/manage_page_mod')?>">修改项目</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
